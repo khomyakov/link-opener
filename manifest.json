@@ -1,0 +1,15 @@
+{
+  "manifest_version": 2,
+  "name": "Link Opener",
+  "version": "1.0",
+  "description": "Open links with a custom parameter and store previous parameters/links",
+  "permissions": ["tabs", "storage"],
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html",
+    "default_title": "Open Link with Parameter"
+  },
+  "icons": {
+    "48": "icon.png"
+  }
+}
