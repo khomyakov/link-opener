@@ -2,8 +2,8 @@ document.getElementById("openLink").addEventListener("click", () => {
     const parameter = document.getElementById("parameter").value;
     if (parameter) {
       const url = `https://example.com?param=${encodeURIComponent(parameter)}`;
-      chrome.tabs.create({ url });
       saveLink(url);
+      chrome.tabs.create({ url });
     }
   });
   
@@ -25,7 +25,7 @@ document.getElementById("openLink").addEventListener("click", () => {
       previousLinks.forEach((link) => {
         const listItem = document.createElement("li");
         const anchor = document.createElement("a");
-        anchor.href = link;
+        anchor.setAttribute("href", link);
         anchor.target = "_blank";
         anchor.textContent = link;
         listItem.appendChild(anchor);
